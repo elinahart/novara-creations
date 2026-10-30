@@ -1,3 +1,51 @@
+# NOVARA Creations
+
+Themes and plugins shared by the community of **[NOVARA](https://github.com/elinahart/novara-releases)**,
+the free app for making video games with a team of AI agents (Claude Code, Codex, Gemini CLI).
+
+NOVARA reads this repository: everything here shows up in the app under **Settings › Creations**
+and installs in one click.
+
+*Version française plus bas.*
+
+## Install a creation
+
+In NOVARA: **Settings › Creations**, pick a theme or a plugin, then “Install”.
+- A theme joins **Settings › Appearance › My themes**: NOVARA draws its town and wallpapers on
+  your computer.
+- A plugin joins **Settings › Plugins**: its game templates show up in “New project”, and your
+  agents read its guides.
+
+## Make your own
+
+- **A theme**: in NOVARA, Settings › Appearance › My themes › “Create a theme with AI”, then
+  “Export”. The format is described in [docs/themes.md](docs/themes.md).
+- **A plugin** (themes, game templates, guides for the agents): [docs/plugins.md](docs/plugins.md),
+  with a full example in [plugins/exemple-novara](plugins/exemple-novara).
+
+## Share
+
+- **From NOVARA**: on one of your themes, “Share”. NOVARA opens GitHub in your browser with the
+  file ready; sign in to your GitHub account and propose it (“Propose changes”).
+- **By hand**: fork this repository, add your theme to `themes/` or your plugin to
+  `plugins/<id>/`, then open a pull request.
+- **A preview picture** (recommended): a 16:9 PNG of 1 MB at most, next to the theme
+  (`themes/my-theme.png`) or in the plugin (`plugins/<id>/apercu.png`). It is shown in NOVARA's
+  shop.
+
+Every proposal is checked automatically (`scripts/index.py`), then reviewed before it is added.
+Only share what you made yourself: a theme that uses sprites found online stays private, and its
+export does not contain them.
+
+## Licence
+
+Creations in this repository are shared under
+[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/): you may use and change
+them as long as you credit their author. By proposing a creation, you agree to share it this way.
+NOVARA itself is not in this repository.
+
+---
+
 # Créations NOVARA
 
 Les thèmes et les plugins partagés par la communauté de **NOVARA**, l'espace de travail pour
