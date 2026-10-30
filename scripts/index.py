@@ -28,6 +28,16 @@ def inside(rel):
     return isinstance(rel, str) and rel and not p.is_absolute() and ".." not in p.parts and "\\" not in rel and ":" not in rel
 
 
+def preview(png, errs):
+    """The creation's picture (a PNG, 1 MB at most), shown in NOVARA's shop; none is fine."""
+    if not png.is_file():
+        return None
+    if png.stat().st_size > 1024 * 1024 or png.read_bytes()[:8] != b"\x89PNG\r\n\x1a\n":
+        errs.append("aperçu : un PNG de 1 Mo au plus")
+        return None
+    return str(png.relative_to(ROOT))
+
+
 def check_theme(path):
     t = json.loads(path.read_text(encoding="utf-8"))
     errs = []
@@ -46,6 +56,7 @@ def check_theme(path):
     entry = {"type": "theme", "id": path.stem, "name": t.get("name", ""), "author": t.get("author", ""), "description": t.get("description", ""),
              "path": str(path.relative_to(ROOT)), "night": bool(t.get("night")),
              "swatches": [t.get("colors", {}).get(k) for k in ("sky_top", "sky_bottom", "primary", "secondary", "lawn")] + [t.get("ui", {}).get("surface")]}
+    entry["preview"] = preview(path.with_suffix(".png"), errs)
     return entry, errs
 
 
@@ -74,6 +85,7 @@ def check_plugin(folder):
     entry = {"type": "plugin", "id": m.get("id", folder.name), "name": m.get("name", ""), "author": m.get("author", ""), "description": m.get("description", ""),
              "version": m.get("version", ""), "path": str(folder.relative_to(ROOT)), "files": files,
              "adds": {"themes": len(m.get("themes", [])), "templates": len(m.get("templates", [])), "guides": len(m.get("guides", []))}}
+    entry["preview"] = preview(folder / "apercu.png", errs)
     return entry, errs
 
 

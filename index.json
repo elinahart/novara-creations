@@ -16,7 +16,8 @@
     "#2ec4b6",
     "#9be08a",
     "#ffffff"
-   ]
+   ],
+   "preview": "themes/lagon-corail.png"
   },
   {
    "type": "plugin",
@@ -27,6 +28,7 @@
    "version": "1.0.0",
    "path": "plugins/exemple-novara",
    "files": [
+    "apercu.png",
     "guides/style-pixel.md",
     "modeles/attrape-etoiles/index.html",
     "modeles/attrape-etoiles/jeu.js",
@@ -37,7 +39,8 @@
     "themes": 1,
     "templates": 1,
     "guides": 1
-   }
+   },
+   "preview": "plugins/exemple-novara/apercu.png"
   }
  ]
 }

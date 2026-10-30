@@ -30,6 +30,9 @@ Installer un plugin…**.
   avec le fichier prêt ; connecte-toi à ton compte GitHub et propose-le (« Propose changes »).
 - **À la main** : fais un fork de ce dépôt, ajoute ton thème dans `themes/` ou ton plugin dans
   `plugins/<id>/`, puis ouvre une pull request.
+- **Une image d'aperçu** (conseillée) : un PNG en 16:9 de 1 Mo au plus, à côté du thème
+  (`themes/mon-theme.png`) ou dans le plugin (`plugins/<id>/apercu.png`). C'est elle qui s'affiche
+  dans la boutique de NOVARA.
 
 Chaque proposition est vérifiée automatiquement (`scripts/index.py`), puis relue avant d'être
 ajoutée. Ne partage que ce que tu as fait toi-même : un thème qui utilise des sprites trouvés en
