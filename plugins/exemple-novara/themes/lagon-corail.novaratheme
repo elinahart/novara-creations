@@ -1,0 +1,19 @@
+{
+  "novara_theme": 1,
+  "name": "Lagon corail",
+  "base": "aero",
+  "sky_kind": "pastel",
+  "horizon": "verre",
+  "plaza": "mosaique",
+  "roof": "jardin",
+  "particles": "bulles",
+  "birds": "mouette",
+  "icon_style": "verre",
+  "cursor_mark": "bulle",
+  "trees": ["palmier-1", "palmier-2", "arbre-fleuri"],
+  "animals": ["chat", "canard"],
+  "night": false, "snow": false, "flat": false, "neon": false, "smoke": false,
+  "colors": {"primary": "#ff6f61", "secondary": "#2ec4b6", "sky_top": "#ff9a8b", "sky_bottom": "#ffe5d9", "water": "#2ec4b6", "lawn": "#9be08a", "road": "#7d8597", "sidewalk": "#f4e9dc", "walls": "#fff6ee", "glass": "#7fdbd2", "leaves": "#4caf50", "light": "#ffd166"},
+  "ui": {"background": "#fff4ee", "surface": "#ffffff", "text": "#3a2420"},
+  "scene": "tropical coral lagoon, turquoise water, white sand beach, palm trees, pink coral reef, sunny sky"
+}

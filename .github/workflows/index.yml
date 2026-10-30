@@ -1,0 +1,30 @@
+# Checks every creation; on main, writes index.json (the list NOVARA reads) and commits it.
+name: Index des créations
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: write
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Vérifier les créations
+        if: github.event_name == 'pull_request'
+        run: python3 scripts/index.py --check
+      - name: Écrire index.json
+        if: github.event_name == 'push'
+        run: |
+          python3 scripts/index.py
+          if ! git diff --quiet index.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+            git add index.json
+            git commit -m "Index des créations mis à jour"
+            git push
+          fi

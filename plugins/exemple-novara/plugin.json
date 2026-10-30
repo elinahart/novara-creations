@@ -1,0 +1,17 @@
+{
+  "id": "exemple-novara",
+  "name": "Exemple NOVARA",
+  "version": "1.0.0",
+  "author": "NOVARA",
+  "description": "Un plugin d'exemple : un thème, un petit jeu web 2D pour démarrer un projet et un guide pour les agents.",
+  "themes": ["themes/lagon-corail.novaratheme"],
+  "templates": [
+    {
+      "name": "Attrape les étoiles",
+      "path": "modeles/attrape-etoiles",
+      "engine": "web2d",
+      "description": "Un petit jeu web 2D jouable : un panier attrape les étoiles qui tombent."
+    }
+  ],
+  "guides": ["guides/style-pixel.md"]
+}

@@ -1,0 +1,43 @@
+{
+ "version": 1,
+ "creations": [
+  {
+   "type": "theme",
+   "id": "lagon-corail",
+   "name": "Lagon corail",
+   "author": "",
+   "description": "",
+   "path": "themes/lagon-corail.novaratheme",
+   "night": false,
+   "swatches": [
+    "#ff9a8b",
+    "#ffe5d9",
+    "#ff6f61",
+    "#2ec4b6",
+    "#9be08a",
+    "#ffffff"
+   ]
+  },
+  {
+   "type": "plugin",
+   "id": "exemple-novara",
+   "name": "Exemple NOVARA",
+   "author": "NOVARA",
+   "description": "Un plugin d'exemple : un thème, un petit jeu web 2D pour démarrer un projet et un guide pour les agents.",
+   "version": "1.0.0",
+   "path": "plugins/exemple-novara",
+   "files": [
+    "guides/style-pixel.md",
+    "modeles/attrape-etoiles/index.html",
+    "modeles/attrape-etoiles/jeu.js",
+    "plugin.json",
+    "themes/lagon-corail.novaratheme"
+   ],
+   "adds": {
+    "themes": 1,
+    "templates": 1,
+    "guides": 1
+   }
+  }
+ ]
+}
